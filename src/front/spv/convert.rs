@@ -1,5 +1,4 @@
 use super::error::Error;
-use num_traits::cast::FromPrimitive;
 use std::convert::TryInto;
 
 pub(super) fn map_binary_operator(word: spirv::Op) -> Result<crate::BinaryOperator, Error> {

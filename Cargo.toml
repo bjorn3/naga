@@ -22,7 +22,6 @@ codespan-reporting = { version = "0.11.0", optional = true }
 rustc-hash = "1.1.0"
 indexmap = "1.6" # 1.7 has MSRV 1.49
 log = "0.4"
-num-traits = "0.2"
 spirv = { version = "0.2", optional = true }
 thiserror = "1.0.21"
 serde = { version = "1.0", features = ["derive"], optional = true }
@@ -52,8 +51,12 @@ diff = "0.1"
 ron = "0.6"
 serde = { version = "1.0", features = ["derive"] }
 spirv = { version = "0.2", features = ["deserialize"] }
-rspirv = "0.10"
+rspirv = "0.11"
 env_logger = "0.8"
+
+[patch.crates-io]
+spirv = { path = "../rspirv/spirv" }
+rspirv = { path = "../rspirv/rspirv" }
 
 [workspace]
 members = [".", "cli"]
